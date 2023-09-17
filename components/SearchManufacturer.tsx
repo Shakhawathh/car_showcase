@@ -1,5 +1,5 @@
 "use client";
-import { SearchManuFacturerProps } from "@/types";
+import { SearchManufacturerProps } from "@/types";
 import React from "react";
 import { Combobox, Transition } from "@headlessui/react";
 import Image from "next/image";
@@ -8,8 +8,8 @@ import { manufacturers } from "@/constants";
 
 const SearchManufacturer = ({
   manufacturer,
-  setManuFacturer,
-}: SearchManuFacturerProps) => {
+  setManufacturer,
+}: SearchManufacturerProps) => {
   const [query, setQuery] = useState("");
 
   const filterManufacturer =
@@ -24,7 +24,7 @@ const SearchManufacturer = ({
 
   return (
     <div className="search-manufacturer">
-      <Combobox value={manufacturer} onChange={setManuFacturer}>
+      <Combobox value={manufacturer} onChange={setManufacturer}>
         <div className="relative w-full">
           <Combobox.Button className="absolute top-[14px]">
             <Image
